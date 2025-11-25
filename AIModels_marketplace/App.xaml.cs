@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+using AIModels_marketplace.Domain.Interfaces;
+using AIModels_marketplace.Domain.Users;
+using AIModels_marketplace.Services;
+
+namespace AIModels_marketplace
+{
+    /// <summary>
+    /// Логика взаимодействия для App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+        public App()
+        {
+            IAuthService authService = new AuthService();
+
+            var (user, suc) = authService.Login("maksonchik22", "thebestpassword");
+            if (suc == true)
+            {
+                Console.WriteLine("Успешный вход");
+                Console.WriteLine(user.Username);
+            }
+            else
+            {
+                Console.WriteLine("Неверный логин или пароль");
+            }
+                
+        }
+
+    }
+}
