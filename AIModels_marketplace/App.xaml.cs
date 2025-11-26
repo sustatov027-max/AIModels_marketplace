@@ -22,8 +22,7 @@ namespace AIModels_marketplace
             IAuthService authService = new AuthService();
             IUserRepository userRepository = new JsonUserRepository();
 
-            var (user, login) = authService.Login("mihan78022", "qwerty1234");
-            Console.WriteLine($"Вход за пользователя {user.Username}, статус {login}");
+            authService.Register("inokentiy88", "sdjgnsondg", "Developer");
 
         }
 

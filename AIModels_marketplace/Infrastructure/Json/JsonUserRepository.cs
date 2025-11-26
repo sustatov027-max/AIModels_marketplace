@@ -21,7 +21,6 @@ namespace AIModels_marketplace.Infrastructure.Json
                 if (_users == null)
                 {
                     _users = _storage.Load<UserBase>(_filename) ?? new List<UserBase>();
-                    UserBase.InitializeLastId(_users);
                 }
                 return _users;
             }
@@ -40,18 +39,27 @@ namespace AIModels_marketplace.Infrastructure.Json
                 throw new ArgumentException($"Неизвестный тип пользователя: {user.GetType()}");
             }
 
-            Users.Add((UserBase)user);
-            _storage.Save<UserBase>(_filename, Users);
+            userToAdd.Id = GenerateNewId();
+            Users.Add(userToAdd);
+            _storage.Save(_filename, Users);
+        }
+
+        private int GenerateNewId()
+        {
+            if (!Users.Any())
+                return 1;
+
+            return Users.Max(u => u.Id) + 1;
         }
 
         public IUser Get(string username)
         {
-            return _storage.Load<UserBase>(_filename).FirstOrDefault(x => x.Username == username);
+            return Users.FirstOrDefault(x => x.Username == username);
         }
 
         public List<IUser> GetAll()
         {
-            return _storage.Load<UserBase>(_filename).Cast<IUser>().ToList();
+            return Users.Cast<IUser>().ToList();
         }
     }
 }

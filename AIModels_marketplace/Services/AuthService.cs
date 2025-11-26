@@ -27,7 +27,7 @@ namespace AIModels_marketplace.Services
                 throw new ArgumentException("Пароль не может быть пустым");
 
             if (role != "Developer" && role != "User")
-                throw new ArgumentException("Роль может быть только Admin или User");
+                throw new ArgumentException("Роль может быть только Developer или User");
 
             string hashed = HashPassword(password);
 

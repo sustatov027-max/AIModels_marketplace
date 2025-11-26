@@ -23,27 +23,10 @@ namespace AIModels_marketplace.Domain.Users
         public UserBase() { }
         public UserBase(string username, string passwordHash, string role) 
         {
-            Id = GenerateId();
             Username = username;
             PasswordHash = passwordHash;
             Role = role;
         }
 
-        public static void InitializeLastId(IEnumerable<UserBase> users)
-        {
-            if (users != null && users.Any())
-            {
-                _lastId = users.Max(u => u.Id);
-            }
-        }
-
-        private static int GenerateId()
-        {
-            lock (_lock)
-            {
-                _lastId++;
-                return _lastId;
-            }
-        }
     }
 }
