@@ -20,6 +20,8 @@ namespace AIModels_marketplace
         {
             IAuthService authService = new AuthService();
 
+            authService.Register("oleja89", "Hahahahahh!!!", "regular");
+
             var (user, suc) = authService.Login("maksonchik22", "thebestpassword");
             if (suc == true)
             {
