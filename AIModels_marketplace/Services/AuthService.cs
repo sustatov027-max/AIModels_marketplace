@@ -36,10 +36,10 @@ namespace AIModels_marketplace.Services
             switch (role)
             {
                 case "Developer":
-                    user = new DeveloperUser(username, password, role);
+                    user = new DeveloperUser(username, hashed, role);
                     break;
                 case "User":
-                    user = new RegularUser(username, password, role);
+                    user = new RegularUser(username, hashed, role);
                     break;
                 default:
                     user = null;
