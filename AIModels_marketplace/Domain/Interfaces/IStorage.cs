@@ -10,12 +10,7 @@ namespace AIModels_marketplace.Domain.Interfaces
 {
     internal interface IStorage
     {
-        List<UserBase> Users { get; set; }
-        List<IAIModel> Models { get; set; }
-        List<IAIModel> LoadModels();
-        void SaveModels(List<IAIModel> models);
-
-        List<UserBase> LoadUsers();
-        void SaveUsers(IUser user);
+        List<T> Load<T>(string filename);
+        void Save<T>(string filename, List<T> items);
     }
 }

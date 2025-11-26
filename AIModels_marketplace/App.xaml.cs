@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using AIModels_marketplace.Domain.Interfaces;
 using AIModels_marketplace.Domain.Users;
+using AIModels_marketplace.Infrastructure.Json;
 using AIModels_marketplace.Services;
 
 namespace AIModels_marketplace
@@ -19,18 +20,13 @@ namespace AIModels_marketplace
         public App()
         {
             IAuthService authService = new AuthService();
+            IUserRepository userRepository = new JsonUserRepository();
 
-            authService.Register("oleja89", "Hahahahahh!!!", "regular");
+            authService.Register("mihan78022", "qwerty1234", "User");
 
-            var (user, suc) = authService.Login("maksonchik22", "thebestpassword");
-            if (suc == true)
+            foreach (IUser user in userRepository.GetAll())
             {
-                Console.WriteLine("Успешный вход");
                 Console.WriteLine(user.Username);
-            }
-            else
-            {
-                Console.WriteLine("Неверный логин или пароль");
             }
                 
         }

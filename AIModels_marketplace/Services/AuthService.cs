@@ -13,10 +13,10 @@ namespace AIModels_marketplace.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly IStorage _storage;
+        private readonly IUserRepository _userRepository;
         public AuthService()
         {
-            _storage = new JsonStorage();
+            _userRepository = new JsonUserRepository();
         }
         public void Register(string username, string password, string role)
         {
@@ -26,11 +26,27 @@ namespace AIModels_marketplace.Services
             if (string.IsNullOrWhiteSpace(password))
                 throw new ArgumentException("Пароль не может быть пустым");
 
-            if (string.IsNullOrWhiteSpace(role))
-                throw new ArgumentException("Роль не может быть пустой");
+            if (role != "Developer" && role != "User")
+                throw new ArgumentException("Роль может быть только Admin или User");
 
-            IUser user = new UserBase(username, HashPassword(password), role);
-            _storage.SaveUsers(user);
+            string hashed = HashPassword(password);
+
+            IUser user;
+
+            switch (role)
+            {
+                case "Developer":
+                    user = new DeveloperUser(username, password, role);
+                    break;
+                case "User":
+                    user = new RegularUser(username, password, role);
+                    break;
+                default:
+                    user = null;
+                    break;
+            }
+
+            _userRepository.Add(user);
         }
 
         public (IUser, bool) Login(string username, string password)
@@ -42,7 +58,7 @@ namespace AIModels_marketplace.Services
                 throw new ArgumentException("Пароль не может быть пустым");
             string EnterPasswordHash = HashPassword(password);
 
-            List<UserBase> users = _storage.LoadUsers() ?? new List<UserBase>();
+            List<IUser> users = _userRepository.GetAll() ?? new List<IUser>();
 
             foreach (var user in users)
             {
