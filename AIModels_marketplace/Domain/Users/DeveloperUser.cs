@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace AIModels_marketplace.Domain.Users
 {
-    [JsonDerivedType(typeof(UserBase), typeDiscriminator: "user")]
-    [JsonDerivedType(typeof(DeveloperUser), typeDiscriminator: "admin")]
     internal class DeveloperUser: UserBase
     {
         public List<int> ModelsIds {  get; set; }
 
-        public DeveloperUser(string username, string passwordHash, string role) : base(username, passwordHash, role)
+        public DeveloperUser(string username, string passwordHash, string role, List<int> modelsIds) : base(username, passwordHash, role)
         {
-            ModelsIds = new List<int>();
+            ModelsIds = modelsIds;
             Role = "Developer";
         }
 

@@ -10,9 +10,9 @@ namespace AIModels_marketplace.Infrastructure.Json
 {
     internal class JsonUserRepository: IUserRepository
     {
-        private readonly JsonStorage _storage = new JsonStorage();
+        private readonly IStorage _storage = new JsonStorage();
         private List<UserBase> _users;
-        private string _filename = "users.json";
+        private string _filename = "D:\\Documents\\2 курс\\ООП\\Курсовая\\AIModels_marketplace\\AIModels_marketplace\\Infrastructure\\Storage\\users.json";
 
         public List<UserBase> Users
         {

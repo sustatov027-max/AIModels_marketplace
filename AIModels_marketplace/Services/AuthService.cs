@@ -18,7 +18,7 @@ namespace AIModels_marketplace.Services
         {
             _userRepository = new JsonUserRepository();
         }
-        public void Register(string username, string password, string role)
+        public void Register(string username, string password, string role, List<int> modelsIds = null)
         {
             if (string.IsNullOrWhiteSpace(username))
                 throw new ArgumentException("Имя пользователя не может быть пустым");
@@ -36,7 +36,7 @@ namespace AIModels_marketplace.Services
             switch (role)
             {
                 case "Developer":
-                    user = new DeveloperUser(username, hashed, role);
+                    user = new DeveloperUser(username, hashed, role, modelsIds ?? new List<int>());
                     break;
                 case "User":
                     user = new RegularUser(username, hashed, role);

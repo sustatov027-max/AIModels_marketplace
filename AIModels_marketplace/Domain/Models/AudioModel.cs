@@ -9,5 +9,14 @@ namespace AIModels_marketplace.Domain.Models
     internal class AudioModel : AIModel
     {
         public int SampleRate { get; set; }
+        public AudioModel()
+        {
+            SampleRate = 0;
+        }
+        public AudioModel(string name, string description, ModelMetadata metadata, List<ModelVersion> versions, int sampleRate): base(name, description, metadata, versions) 
+        {
+            SampleRate = sampleRate;
+        }
+
     }
 }

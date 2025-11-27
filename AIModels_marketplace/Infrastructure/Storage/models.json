@@ -1,0 +1,16 @@
+[
+  {
+    "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+    "MaxResolution": "200x200",
+    "Id": 0,
+    "Name": "Vision1.0",
+    "Description": "description"
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+    "MaxResolution": "200x200",
+    "Id": 0,
+    "Name": "Vision1.0",
+    "Description": "description"
+  }
+]

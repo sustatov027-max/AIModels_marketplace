@@ -25,6 +25,13 @@ namespace AIModels_marketplace.Domain.Models
             return Versions.LastOrDefault();
         }
 
-
+        public AIModel() { }
+        public AIModel(string name, string description, ModelMetadata metadata, List<ModelVersion> versions)
+        {
+            Name = name; 
+            Description = description; 
+            Metadata = metadata; 
+            Versions = versions; 
+        }
     }
 }

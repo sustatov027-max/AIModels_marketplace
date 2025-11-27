@@ -12,9 +12,6 @@ namespace AIModels_marketplace.Domain.Users
 {
     internal abstract class UserBase: IUser
     {
-        private static int _lastId = 0;
-        private static readonly object _lock = new object();
-
         public int Id { get; set; }
         public string Username { get; set; }
         public string PasswordHash { get; set; }

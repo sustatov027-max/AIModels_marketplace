@@ -89,9 +89,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Domain\Interfaces\IAuthService.cs" />
+    <Compile Include="Domain\Interfaces\IModelRepository.cs" />
     <Compile Include="Domain\Interfaces\IStorage.cs" />
     <Compile Include="Domain\Interfaces\IUserRepository.cs" />
     <Compile Include="Domain\Users\RegularUser.cs" />
+    <Compile Include="Infrastructure\Json\JsonModelRepository.cs" />
     <Compile Include="Infrastructure\Json\JsonStorage.cs" />
     <Compile Include="Infrastructure\Json\JsonUserRepository.cs" />
     <Compile Include="Services\AuthService.cs" />
@@ -137,6 +139,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Infrastructure\Storage\models.json" />
+    <None Include="Infrastructure\Storage\users.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
