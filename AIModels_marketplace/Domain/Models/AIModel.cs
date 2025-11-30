@@ -7,7 +7,7 @@ using AIModels_marketplace.Domain.Interfaces;
 
 namespace AIModels_marketplace.Domain.Models
 {
-    internal abstract class AIModel: IAIModel, IVersioned
+    public abstract class AIModel: IAIModel, IVersioned
     {
         public int Id { get; set; }
         public string Name { get; set; }

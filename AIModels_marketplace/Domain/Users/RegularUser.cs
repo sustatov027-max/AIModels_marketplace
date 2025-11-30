@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AIModels_marketplace.Domain.Users
 {
-    internal class RegularUser: UserBase
+    public class RegularUser: UserBase
     {
         public RegularUser() { }
         public RegularUser(string username, string passwordHash, string role)

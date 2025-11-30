@@ -8,7 +8,7 @@ using AIModels_marketplace.Domain.Users;
 
 namespace AIModels_marketplace.Infrastructure.Json
 {
-    internal class JsonUserRepository: IUserRepository
+    public class JsonUserRepository: IUserRepository
     {
         private readonly IStorage _storage = new JsonStorage();
         private List<UserBase> _users;
@@ -43,7 +43,6 @@ namespace AIModels_marketplace.Infrastructure.Json
             Users.Add(userToAdd);
             _storage.Save(_filename, Users);
         }
-
         private int GenerateNewId()
         {
             if (!Users.Any())
@@ -61,5 +60,6 @@ namespace AIModels_marketplace.Infrastructure.Json
         {
             return Users.Cast<IUser>().ToList();
         }
+
     }
 }

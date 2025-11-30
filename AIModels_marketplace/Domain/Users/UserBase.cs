@@ -10,7 +10,7 @@ using AIModels_marketplace.Infrastructure.Json;
 
 namespace AIModels_marketplace.Domain.Users
 {
-    internal abstract class UserBase: IUser
+    public abstract class UserBase: IUser
     {
         public int Id { get; set; }
         public string Username { get; set; }

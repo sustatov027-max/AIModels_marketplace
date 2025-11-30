@@ -1,3 +1,16 @@
-{
-
-}
+[
+  {
+    "$type": "AIModels_marketplace.Domain.Users.DeveloperUser, AIModels_marketplace",
+    "Id": 1,
+    "Username": "bobka003",
+    "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
+    "Role": "Developer"
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Users.DeveloperUser, AIModels_marketplace",
+    "Id": 2,
+    "Username": "sirserg123",
+    "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
+    "Role": "Developer"
+  }
+]

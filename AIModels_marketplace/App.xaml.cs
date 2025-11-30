@@ -21,13 +21,41 @@ namespace AIModels_marketplace
         public App()
         {
             IAuthService authService = new AuthService();
-            IUserRepository userRepository = new JsonUserRepository();
 
-            IModelRepository modelRepository = new JsonModelRepository();
+            List<ModelVersion> modelVersions = new List<ModelVersion>();
+            modelVersions.Add(new ModelVersion("2.3f", "added new functions"));
+
+            //IAIModel model = new VisionModel("Vision 2.0", "This is vision model",
+            //    new ModelMetadata("Vision Model", 0, new Dictionary<string, string>() { { "config", "default" } }),
+            //    modelVersions,
+            //    "1080p");
+            //modelRepository.Add(model);
+
+            //IAIModel model2 = new VisionModel("Vision 2.7", "This is vision model",
+            //    new ModelMetadata("Vision Model", 0, new Dictionary<string, string>() { { "config", "default" } }),
+            //    modelVersions,
+            //    "720p");
+            //modelRepository.Add(model2);
 
 
-            IAIModel model = new VisionModel("Vision1.0", "description", null, null, "200x200");
-            modelRepository.Add(model);
+            authService.Register("sirserg123", "2556625", "Developer");
+            var (user, login) = authService.Login("sirserg123", "2556625");
+            if (user is DeveloperUser developer)
+            {
+                IAIModel testModel = new VisionModel("The Best Model", "This is a new vision model from developer 2",
+                new ModelMetadata("Vision Model", developer.Id, new Dictionary<string, string>() { { "config", "default" } }),
+                modelVersions,
+                "720p");
+
+                developer.CreateModel(testModel);
+                //developer.UpdateModel(2, updateModel);
+                //developer.DeleteModel(2);
+
+                foreach (IAIModel model in developer.GetAllModels())
+                {
+                    Console.WriteLine(model.Id);
+                }
+            }
         }
 
     }

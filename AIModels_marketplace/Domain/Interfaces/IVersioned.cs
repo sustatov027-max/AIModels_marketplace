@@ -7,7 +7,7 @@ using AIModels_marketplace.Domain.Models;
 
 namespace AIModels_marketplace.Domain.Interfaces
 {
-    internal interface IVersioned
+    public interface IVersioned
     {
         void AddVersion(ModelVersion v);
         ModelVersion GetLatestVersion();

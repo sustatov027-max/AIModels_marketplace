@@ -90,6 +90,7 @@
     </ApplicationDefinition>
     <Compile Include="Domain\Interfaces\IAuthService.cs" />
     <Compile Include="Domain\Interfaces\IModelRepository.cs" />
+    <Compile Include="Domain\Interfaces\IDeveloperModelService.cs" />
     <Compile Include="Domain\Interfaces\IStorage.cs" />
     <Compile Include="Domain\Interfaces\IUserRepository.cs" />
     <Compile Include="Domain\Users\RegularUser.cs" />

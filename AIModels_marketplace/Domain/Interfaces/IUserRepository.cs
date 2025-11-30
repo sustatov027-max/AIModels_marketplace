@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AIModels_marketplace.Domain.Interfaces
 {
-    internal interface IUserRepository
+    public interface IUserRepository
     {
         void Add(IUser user);
         IUser Get(string username);

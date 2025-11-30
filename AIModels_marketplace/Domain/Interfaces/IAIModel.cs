@@ -7,7 +7,7 @@ using AIModels_marketplace.Domain.Models;
 
 namespace AIModels_marketplace.Domain.Interfaces
 {
-    internal interface IAIModel
+    public interface IAIModel
     {
         int Id { get; set; }
         string Name { get; set; }

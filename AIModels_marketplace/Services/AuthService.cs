@@ -36,7 +36,7 @@ namespace AIModels_marketplace.Services
             switch (role)
             {
                 case "Developer":
-                    user = new DeveloperUser(username, hashed, role, modelsIds ?? new List<int>());
+                    user = new DeveloperUser(username, hashed, role);
                     break;
                 case "User":
                     user = new RegularUser(username, hashed, role);
@@ -49,7 +49,7 @@ namespace AIModels_marketplace.Services
             _userRepository.Add(user);
         }
 
-        public (IUser, bool) Login(string username, string password)
+        public (UserBase, bool) Login(string username, string password)
         {
             if (string.IsNullOrWhiteSpace(username))
                 throw new ArgumentException("Имя пользователя не может быть пустым");
@@ -60,7 +60,7 @@ namespace AIModels_marketplace.Services
 
             List<IUser> users = _userRepository.GetAll() ?? new List<IUser>();
 
-            foreach (var user in users)
+            foreach (UserBase user in users)
             {
                 if ((user.Username == username) && (user.PasswordHash == EnterPasswordHash))
                 {

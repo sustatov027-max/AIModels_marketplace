@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AIModels_marketplace.Domain.Models
 {
-    internal class AudioModel : AIModel
+    public class AudioModel : AIModel
     {
         public int SampleRate { get; set; }
         public AudioModel()

@@ -1,3 +1,44 @@
-{
-
-}
+[
+  {
+    "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+    "MaxResolution": "1080p",
+    "Id": 1,
+    "Name": "Vision 3.1",
+    "Description": "This is a new vision model from developer 3",
+    "Metadata": {
+      "Category": "Vision Model",
+      "AuthorId": 1,
+      "Parameters": {
+        "config": "default"
+      }
+    },
+    "Versions": [
+      {
+        "VersionNumber": "2.3f",
+        "ReleaseDate": "2025-11-30T23:03:11.6946063+03:00",
+        "Changelog": "added new functions"
+      }
+    ]
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+    "MaxResolution": "720p",
+    "Id": 2,
+    "Name": "The Best Model",
+    "Description": "This is a new vision model from developer 2",
+    "Metadata": {
+      "Category": "Vision Model",
+      "AuthorId": 2,
+      "Parameters": {
+        "config": "default"
+      }
+    },
+    "Versions": [
+      {
+        "VersionNumber": "2.3f",
+        "ReleaseDate": "2025-11-30T23:16:25.6231718+03:00",
+        "Changelog": "added new functions"
+      }
+    ]
+  }
+]

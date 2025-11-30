@@ -8,7 +8,7 @@ using AIModels_marketplace.Domain.Users;
 
 namespace AIModels_marketplace.Domain.Interfaces
 {
-    internal interface IStorage
+    public interface IStorage
     {
         List<T> Load<T>(string filename);
         void Save<T>(string filename, List<T> items);
