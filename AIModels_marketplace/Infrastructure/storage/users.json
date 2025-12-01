@@ -12,5 +12,61 @@
     "Username": "sirserg123",
     "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
     "Role": "Developer"
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Users.RegularUser, AIModels_marketplace",
+    "Models": [
+      {
+        "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+        "MaxResolution": "1080p",
+        "Id": 1,
+        "Name": "Vision 3.1",
+        "Description": "This is a new vision model from developer 3",
+        "Metadata": {
+          "Category": "Vision Model",
+          "AuthorId": 1,
+          "Parameters": {
+            "config": "default"
+          }
+        },
+        "Versions": [
+          {
+            "VersionNumber": "2.3f",
+            "ReleaseDate": "2025-11-30T23:03:11.6946063+03:00",
+            "Changelog": "added new functions"
+          },
+          {
+            "VersionNumber": "2.2f-log",
+            "ReleaseDate": "2025-12-01T14:52:25.6967745+03:00",
+            "Changelog": "new functions"
+          }
+        ]
+      },
+      {
+        "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+        "MaxResolution": "720p",
+        "Id": 2,
+        "Name": "The Best Model",
+        "Description": "This is a new vision model from developer 2",
+        "Metadata": {
+          "Category": "Vision Model",
+          "AuthorId": 2,
+          "Parameters": {
+            "config": "default"
+          }
+        },
+        "Versions": [
+          {
+            "VersionNumber": "2.3f",
+            "ReleaseDate": "2025-11-30T23:16:25.6231718+03:00",
+            "Changelog": "added new functions"
+          }
+        ]
+      }
+    ],
+    "Id": 3,
+    "Username": "mihan778",
+    "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
+    "Role": "User"
   }
 ]

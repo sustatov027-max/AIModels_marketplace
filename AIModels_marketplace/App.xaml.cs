@@ -38,22 +38,30 @@ namespace AIModels_marketplace
             //modelRepository.Add(model2);
 
 
-            authService.Register("sirserg123", "2556625", "Developer");
+           // authService.Register("mihan778", "2556625", "User");
             var (user, login) = authService.Login("sirserg123", "2556625");
             if (user is DeveloperUser developer)
             {
-                IAIModel testModel = new VisionModel("The Best Model", "This is a new vision model from developer 2",
+                IAIModel testModel = new VisionModel("Vision model 1.0", "This is a new vision model from developer 2",
                 new ModelMetadata("Vision Model", developer.Id, new Dictionary<string, string>() { { "config", "default" } }),
                 modelVersions,
-                "720p");
+                "480p");
 
-                developer.CreateModel(testModel);
+                //developer.CreateModel(testModel);
                 //developer.UpdateModel(2, updateModel);
                 //developer.DeleteModel(2);
 
-                foreach (IAIModel model in developer.GetAllModels())
+                foreach (var model in developer.GetAllModels())
                 {
-                    Console.WriteLine(model.Id);
+                    Console.WriteLine(model.Name);
+                }
+            }
+            else if (user is RegularUser regularUser)
+            {
+                List<IAIModel> models = regularUser.GetAllModels();
+                foreach (IAIModel model in models)
+                {
+                    model.ShowInfo();
                 }
             }
         }

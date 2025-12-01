@@ -17,6 +17,11 @@
         "VersionNumber": "2.3f",
         "ReleaseDate": "2025-11-30T23:03:11.6946063+03:00",
         "Changelog": "added new functions"
+      },
+      {
+        "VersionNumber": "2.2f-log",
+        "ReleaseDate": "2025-12-01T14:52:25.6967745+03:00",
+        "Changelog": "new functions"
       }
     ]
   },
@@ -37,6 +42,27 @@
       {
         "VersionNumber": "2.3f",
         "ReleaseDate": "2025-11-30T23:16:25.6231718+03:00",
+        "Changelog": "added new functions"
+      }
+    ]
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+    "MaxResolution": "480p",
+    "Id": 3,
+    "Name": "Vision model 1.0",
+    "Description": "This is a new vision model from developer 2",
+    "Metadata": {
+      "Category": "Vision Model",
+      "AuthorId": 2,
+      "Parameters": {
+        "config": "default"
+      }
+    },
+    "Versions": [
+      {
+        "VersionNumber": "2.3f",
+        "ReleaseDate": "2025-12-01T15:26:11.2473099+03:00",
         "Changelog": "added new functions"
       }
     ]

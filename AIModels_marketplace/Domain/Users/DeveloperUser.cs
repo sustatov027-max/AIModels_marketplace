@@ -57,6 +57,10 @@ namespace AIModels_marketplace.Domain.Users
 
         public IAIModel GetModel(int id)
         {
+            if (DeveloperModels.FirstOrDefault(m => m.Id == id) == null)
+            {
+                throw new ArgumentException("Модель с данным id не найдена");
+            }
             return DeveloperModels.FirstOrDefault(m => m.Id == id);
         }
 

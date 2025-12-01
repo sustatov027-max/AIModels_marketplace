@@ -16,5 +16,7 @@ namespace AIModels_marketplace.Domain.Interfaces
         List<ModelVersion> Versions { get; set; }
         void AddVersion(ModelVersion v);
         ModelVersion GetLatestVersion();
+
+        void ShowInfo();
     }
 }

@@ -19,5 +19,10 @@ namespace AIModels_marketplace.Domain.Models
         {
             ContextSize = contextSize;
         }
+
+        public override void ShowInfo()
+        {
+            Console.WriteLine($"Тип: {this.GetType()},\n название: {Name},\n описание: {Description},\n id разработчика: {Metadata.AuthorId},\n кол-во версий: {Versions.Count()},\n размер: {ContextSize}\n");
+        }
     }
 }
