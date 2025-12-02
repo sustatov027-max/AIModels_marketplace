@@ -28,7 +28,6 @@ namespace AIModels_marketplace.Views
                 VersionTextBox.Text = latest?.VersionNumber ?? "";
                 VersionNotesTextBox.Text = latest?.Changelog ?? "";
 
-                // Категория — из метаданных
                 var category = _editingModel.Metadata?.Category ?? "Vision";
                 if (category == "Vision") TypeComboBox.SelectedIndex = 0;
                 else if (category == "Audio") TypeComboBox.SelectedIndex = 1;
