@@ -2,14 +2,7 @@
   {
     "$type": "AIModels_marketplace.Domain.Users.DeveloperUser, AIModels_marketplace",
     "Id": 1,
-    "Username": "bobka003",
-    "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
-    "Role": "Developer"
-  },
-  {
-    "$type": "AIModels_marketplace.Domain.Users.DeveloperUser, AIModels_marketplace",
-    "Id": 2,
-    "Username": "sirserg123",
+    "Username": "DeveloperUser",
     "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
     "Role": "Developer"
   },
@@ -20,52 +13,115 @@
         "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
         "MaxResolution": "1080p",
         "Id": 1,
-        "Name": "Vision 3.1",
-        "Description": "This is a new vision model from developer 3",
+        "Name": "Vision 1.0",
+        "Description": "Это новая визуальная модель",
         "Metadata": {
-          "Category": "Vision Model",
+          "Category": "Vision",
           "AuthorId": 1,
           "Parameters": {
-            "config": "default"
+            "created": "2025-12-02T18:31:53.5316880Z"
           }
         },
         "Versions": [
           {
-            "VersionNumber": "2.3f",
-            "ReleaseDate": "2025-11-30T23:03:11.6946063+03:00",
-            "Changelog": "added new functions"
+            "VersionNumber": "1.0",
+            "ReleaseDate": "2025-12-02T21:31:04.233889+03:00",
+            "Changelog": "Отсутствует"
           },
           {
-            "VersionNumber": "2.2f-log",
-            "ReleaseDate": "2025-12-01T14:52:25.6967745+03:00",
-            "Changelog": "new functions"
+            "VersionNumber": "2.0",
+            "ReleaseDate": "2025-12-02T21:31:53.531688+03:00",
+            "Changelog": "Отсутствует"
           }
         ]
       },
       {
-        "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
-        "MaxResolution": "720p",
+        "$type": "AIModels_marketplace.Domain.Models.TextModel, AIModels_marketplace",
+        "MaxTokens": 0,
         "Id": 2,
-        "Name": "The Best Model",
-        "Description": "This is a new vision model from developer 2",
+        "Name": "Текстовая модель мечты",
+        "Description": "Описание модели ещё не придумал",
         "Metadata": {
-          "Category": "Vision Model",
-          "AuthorId": 2,
+          "Category": "Text",
+          "AuthorId": 3,
           "Parameters": {
-            "config": "default"
+            "created": "2025-12-02T18:39:38.8695313Z"
           }
         },
         "Versions": [
           {
-            "VersionNumber": "2.3f",
-            "ReleaseDate": "2025-11-30T23:16:25.6231718+03:00",
-            "Changelog": "added new functions"
+            "VersionNumber": "1.0",
+            "ReleaseDate": "2025-12-02T21:39:38.8695313+03:00",
+            "Changelog": "-"
           }
         ]
       }
     ],
+    "Id": 2,
+    "Username": "RegularUser",
+    "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
+    "Role": "User"
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Users.DeveloperUser, AIModels_marketplace",
     "Id": 3,
-    "Username": "mihan778",
+    "Username": "DeveloperUser2",
+    "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
+    "Role": "Developer"
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Users.RegularUser, AIModels_marketplace",
+    "Models": [
+      {
+        "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
+        "MaxResolution": "1080p",
+        "Id": 1,
+        "Name": "Vision 1.0",
+        "Description": "Это новая визуальная модель",
+        "Metadata": {
+          "Category": "Vision",
+          "AuthorId": 1,
+          "Parameters": {
+            "created": "2025-12-02T18:31:53.5316880Z"
+          }
+        },
+        "Versions": [
+          {
+            "VersionNumber": "1.0",
+            "ReleaseDate": "2025-12-02T21:31:04.233889+03:00",
+            "Changelog": "Отсутствует"
+          },
+          {
+            "VersionNumber": "2.0",
+            "ReleaseDate": "2025-12-02T21:31:53.531688+03:00",
+            "Changelog": "Отсутствует"
+          }
+        ]
+      },
+      {
+        "$type": "AIModels_marketplace.Domain.Models.TextModel, AIModels_marketplace",
+        "MaxTokens": 0,
+        "Id": 2,
+        "Name": "Текстовая модель мечты",
+        "Description": "Описание модели ещё не придумал",
+        "Metadata": {
+          "Category": "Text",
+          "AuthorId": 3,
+          "Parameters": {
+            "created": "2025-12-02T18:39:38.8695313Z"
+          }
+        },
+        "Versions": [
+          {
+            "VersionNumber": "1.0",
+            "ReleaseDate": "2025-12-02T21:39:38.8695313+03:00",
+            "Changelog": "-"
+          }
+        ]
+      }
+    ],
+    "Id": 4,
+    "Username": "RegularUser2",
     "PasswordHash": "L0xly+fOSOn0LZacz8PLhCQStYbsKsH6Jn3z2rY1ohI=",
     "Role": "User"
   }

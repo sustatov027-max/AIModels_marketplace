@@ -18,10 +18,7 @@ namespace AIModels_marketplace.Infrastructure.Json
         {
             get
             {
-                if (_models == null)
-                {
-                    _models = _storage.Load<AIModel>(_filename) ?? new List<AIModel>();
-                }
+                _models = _storage.Load<AIModel>(_filename) ?? new List<AIModel>();
                 return _models;
             }
 
@@ -36,17 +33,20 @@ namespace AIModels_marketplace.Infrastructure.Json
                 throw new ArgumentException($"Неизвестный тип модели: {model.GetType()}");
             }
 
+            var current = Models;
             modelToAdd.Id = GenerateNewId();
-            Models.Add(modelToAdd);
-            _storage.Save(_filename, Models);
+            current.Add(modelToAdd);
+            _storage.Save(_filename, current);
+            _models = current;
         }
 
         private int GenerateNewId()
         {
-            if (!Models.Any())
+            var current = Models;
+            if (!current.Any())
                 return 1;
 
-            return Models.Max(u => u.Id) + 1;
+            return current.Max(u => u.Id) + 1;
         }
 
         public IAIModel Get(int id)
@@ -61,15 +61,23 @@ namespace AIModels_marketplace.Infrastructure.Json
 
         public void Update(int id, AIModel newModel)
         {
+            var current = Models;
+            int index = current.FindIndex(m => m.Id == id);
+            if (index < 0)
+                throw new ArgumentException("Модель с данным id не найдена");
+
             newModel.Id = id;
-            Models[Models.FindIndex(m => m.Id == id)] = newModel;
-            _storage.Save(_filename, Models);
+            current[index] = newModel;
+            _storage.Save(_filename, current);
+            _models = current;
         }
 
         public void Delete(int id)
         {
-            Models.RemoveAll(m => m.Id == id);
-            _storage.Save(_filename, Models);
+            var current = Models;
+            current.RemoveAll(m => m.Id == id);
+            _storage.Save(_filename, current);
+            _models = current;
         }
     }
 }

@@ -12,6 +12,6 @@ namespace AIModels_marketplace.Domain.Interfaces
         IAIModel GetModel(int id);
         List<IAIModel> GetAllModels();
         void UpdateModel(int id, IAIModel model);
-        //void DeleteModel(int id);
+        void DeleteModel(int id);
     }
 }

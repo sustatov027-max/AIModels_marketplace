@@ -3,67 +3,93 @@
     "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
     "MaxResolution": "1080p",
     "Id": 1,
-    "Name": "Vision 3.1",
-    "Description": "This is a new vision model from developer 3",
+    "Name": "Vision 1.0",
+    "Description": "Это новая визуальная модель",
     "Metadata": {
-      "Category": "Vision Model",
+      "Category": "Vision",
       "AuthorId": 1,
       "Parameters": {
-        "config": "default"
+        "created": "2025-12-02T18:31:53.5316880Z"
       }
     },
     "Versions": [
       {
-        "VersionNumber": "2.3f",
-        "ReleaseDate": "2025-11-30T23:03:11.6946063+03:00",
-        "Changelog": "added new functions"
+        "VersionNumber": "1.0",
+        "ReleaseDate": "2025-12-02T21:31:04.233889+03:00",
+        "Changelog": "Отсутствует"
       },
       {
-        "VersionNumber": "2.2f-log",
-        "ReleaseDate": "2025-12-01T14:52:25.6967745+03:00",
-        "Changelog": "new functions"
+        "VersionNumber": "2.0",
+        "ReleaseDate": "2025-12-02T21:31:53.531688+03:00",
+        "Changelog": "Отсутствует"
       }
     ]
   },
   {
-    "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
-    "MaxResolution": "720p",
+    "$type": "AIModels_marketplace.Domain.Models.TextModel, AIModels_marketplace",
+    "MaxTokens": 0,
     "Id": 2,
-    "Name": "The Best Model",
-    "Description": "This is a new vision model from developer 2",
+    "Name": "Текстовая модель мечты",
+    "Description": "Описание модели ещё не придумал",
     "Metadata": {
-      "Category": "Vision Model",
-      "AuthorId": 2,
+      "Category": "Text",
+      "AuthorId": 3,
       "Parameters": {
-        "config": "default"
+        "created": "2025-12-02T18:39:38.8695313Z"
       }
     },
     "Versions": [
       {
-        "VersionNumber": "2.3f",
-        "ReleaseDate": "2025-11-30T23:16:25.6231718+03:00",
-        "Changelog": "added new functions"
+        "VersionNumber": "1.0",
+        "ReleaseDate": "2025-12-02T21:39:38.8695313+03:00",
+        "Changelog": "-"
+      }
+    ]
+  },
+  {
+    "$type": "AIModels_marketplace.Domain.Models.AudioModel, AIModels_marketplace",
+    "SampleRate": 4200,
+    "Id": 3,
+    "Name": "Аудио модель",
+    "Description": "Какое-то описание",
+    "Metadata": {
+      "Category": "Audio",
+      "AuthorId": 1,
+      "Parameters": {
+        "created": "2025-12-02T18:42:52.8453925Z"
+      }
+    },
+    "Versions": [
+      {
+        "VersionNumber": "1.0",
+        "ReleaseDate": "2025-12-02T21:42:52.8453925+03:00",
+        "Changelog": "-"
       }
     ]
   },
   {
     "$type": "AIModels_marketplace.Domain.Models.VisionModel, AIModels_marketplace",
-    "MaxResolution": "480p",
-    "Id": 3,
-    "Name": "Vision model 1.0",
-    "Description": "This is a new vision model from developer 2",
+    "MaxResolution": "1080p",
+    "Id": 4,
+    "Name": "Smart vision model",
+    "Description": "This is a new smart vision model",
     "Metadata": {
-      "Category": "Vision Model",
-      "AuthorId": 2,
+      "Category": "Vision",
+      "AuthorId": 1,
       "Parameters": {
-        "config": "default"
+        "created": "2025-12-02T19:04:50.1954596Z"
       }
     },
     "Versions": [
       {
-        "VersionNumber": "2.3f",
-        "ReleaseDate": "2025-12-01T15:26:11.2473099+03:00",
-        "Changelog": "added new functions"
+        "VersionNumber": "1.0",
+        "ReleaseDate": "2025-12-02T22:04:03.5443813+03:00",
+        "Changelog": "-"
+      },
+      {
+        "VersionNumber": "2.0",
+        "ReleaseDate": "2025-12-02T22:04:50.1954596+03:00",
+        "Changelog": "Added new functions"
       }
     ]
   }

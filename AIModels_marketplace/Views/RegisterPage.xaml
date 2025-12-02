@@ -1,0 +1,22 @@
+﻿<Page x:Class="AIModels_marketplace.Views.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="RegisterPage">
+    <Grid Margin="12">
+        <StackPanel Width="380">
+            <TextBlock Text="Регистрация" FontSize="18" FontWeight="Bold" Margin="0,0,0,8"/>
+            <Label Content="Имя пользователя"/>
+            <TextBox Name="UsernameTextBox"/>
+            <Label Content="Пароль" Margin="0,8,0,0"/>
+            <PasswordBox Name="PasswordBox"/>
+            <Label Content="Роль" Margin="0,8,0,0"/>
+            <ComboBox Name="RoleComboBox" SelectedIndex="1">
+                <ComboBoxItem>Developer</ComboBoxItem>
+                <ComboBoxItem>User</ComboBoxItem>
+            </ComboBox>
+
+            <Button Content="Зарегистрироваться" Width="160" Margin="0,12,0,0" Click="Register_Click"/>
+            <Button Content="Вернуться к входу" Width="160" Margin="0,6,0,0" Click="BackToLogin_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

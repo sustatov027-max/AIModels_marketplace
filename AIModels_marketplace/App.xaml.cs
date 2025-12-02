@@ -5,11 +5,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using AIModels_marketplace.Domain.Interfaces;
-using AIModels_marketplace.Domain.Models;
-using AIModels_marketplace.Domain.Users;
-using AIModels_marketplace.Infrastructure.Json;
-using AIModels_marketplace.Services;
 
 namespace AIModels_marketplace
 {
@@ -20,51 +15,8 @@ namespace AIModels_marketplace
     {
         public App()
         {
-            IAuthService authService = new AuthService();
-
-            List<ModelVersion> modelVersions = new List<ModelVersion>();
-            modelVersions.Add(new ModelVersion("2.3f", "added new functions"));
-
-            //IAIModel model = new VisionModel("Vision 2.0", "This is vision model",
-            //    new ModelMetadata("Vision Model", 0, new Dictionary<string, string>() { { "config", "default" } }),
-            //    modelVersions,
-            //    "1080p");
-            //modelRepository.Add(model);
-
-            //IAIModel model2 = new VisionModel("Vision 2.7", "This is vision model",
-            //    new ModelMetadata("Vision Model", 0, new Dictionary<string, string>() { { "config", "default" } }),
-            //    modelVersions,
-            //    "720p");
-            //modelRepository.Add(model2);
-
-
-           // authService.Register("mihan778", "2556625", "User");
-            var (user, login) = authService.Login("sirserg123", "2556625");
-            if (user is DeveloperUser developer)
-            {
-                IAIModel testModel = new VisionModel("Vision model 1.0", "This is a new vision model from developer 2",
-                new ModelMetadata("Vision Model", developer.Id, new Dictionary<string, string>() { { "config", "default" } }),
-                modelVersions,
-                "480p");
-
-                //developer.CreateModel(testModel);
-                //developer.UpdateModel(2, updateModel);
-                //developer.DeleteModel(2);
-
-                foreach (var model in developer.GetAllModels())
-                {
-                    Console.WriteLine(model.Name);
-                }
-            }
-            else if (user is RegularUser regularUser)
-            {
-                List<IAIModel> models = regularUser.GetAllModels();
-                foreach (IAIModel model in models)
-                {
-                    model.ShowInfo();
-                }
-            }
+            var mainWindow = new Views.MainWindow();
+            mainWindow.Show();
         }
-
     }
 }
