@@ -17,12 +17,12 @@
             <TextBox Name="UsernameTextBox" Height="25" VerticalAlignment="Center" FontSize="14"/>
             <Label Content="Пароль" Margin="0,8,0,0"/>
             <PasswordBox Name="PasswordBox" Height="25" VerticalAlignment="Center" FontSize="14"/>
-            <Button Content="Войти" Width="120" Margin="0,12,0,0" Click="Login_Click"/>
+            <Button Content="Войти" Width="120" Height="25" Margin="0,12,0,0" Click="Login_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,16,0,0">
             <TextBlock VerticalAlignment="Center">Нет аккаунта?</TextBlock>
-            <Button Content="Перейти к регистрации" Margin="8,0,0,0" Click="GoRegister_Click"/>
+            <Button Content="Перейти к регистрации" Height="25" Margin="8,0,0,0" Click="GoRegister_Click"/>
         </StackPanel>
     </Grid>
 </Page>

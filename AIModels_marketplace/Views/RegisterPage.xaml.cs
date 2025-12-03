@@ -54,5 +54,6 @@ namespace AIModels_marketplace.Views
             }
             NavigationService?.Navigate(new LoginPage());
         }
+
     }
 }

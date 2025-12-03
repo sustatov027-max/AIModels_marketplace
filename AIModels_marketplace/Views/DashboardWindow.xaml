@@ -12,13 +12,13 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
             <TextBlock Name="WelcomeTextBlock" FontSize="16" FontWeight="Bold" />
-            <Button Content="Выйти" HorizontalAlignment="Right" Margin="10,0,0,0" Click="LogoutButton_Click"/>
+            <Button Content="Выйти" Height="25"  HorizontalAlignment="Right" Margin="10,0,0,0" Click="LogoutButton_Click"/>
         </StackPanel>
 
-        <ListBox Name="ModelsListBox" Grid.Row="2" DisplayMemberPath="Name" />
+        <ListBox Name="ModelsListBox" Grid.Row="2" Height="Auto" DisplayMemberPath="Name"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left" Margin="0,8,0,0">
-            <Button Name="CreateButton" Content="Создать" Width="100" Click="CreateButton_Click"/>
+        <StackPanel Orientation="Horizontal" Height="25" Grid.Row="3" HorizontalAlignment="Left" Margin="0,8,0,0">
+            <Button Name="CreateButton" Content="Создать" Width="100"  Click="CreateButton_Click"/>
             <Button Name="EditButton" Content="Редактировать" Width="110" Margin="8,0,0,0" Click="EditButton_Click"/>
             <Button Name="DeleteButton" Content="Удалить" Width="100" Margin="8,0,0,0" Click="DeleteButton_Click"/>
             <Button Name="RefreshButton" Content="Обновить" Width="100" Margin="18,0,0,0" Click="RefreshButton_Click"/>

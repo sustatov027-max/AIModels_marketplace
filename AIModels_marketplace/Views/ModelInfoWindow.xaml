@@ -32,7 +32,7 @@
         </ScrollViewer>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
-            <Button Content="Закрыть" Width="100" Click="Close_Click"/>
+            <Button Content="Закрыть" Height="25" Width="100" Click="Close_Click"/>
         </StackPanel>
     </Grid>
 </Window>

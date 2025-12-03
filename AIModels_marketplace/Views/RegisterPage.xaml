@@ -6,17 +6,17 @@
         <StackPanel Width="380">
             <TextBlock Text="Регистрация" FontSize="18" FontWeight="Bold" Margin="0,0,0,8"/>
             <Label Content="Имя пользователя"/>
-            <TextBox Name="UsernameTextBox"/>
+            <TextBox Name="UsernameTextBox" Height="25" FontSize="14"/>
             <Label Content="Пароль" Margin="0,8,0,0"/>
-            <PasswordBox Name="PasswordBox"/>
+            <PasswordBox Name="PasswordBox" Height="25" FontSize="14"/>
             <Label Content="Роль" Margin="0,8,0,0"/>
-            <ComboBox Name="RoleComboBox" SelectedIndex="1">
-                <ComboBoxItem>Developer</ComboBoxItem>
-                <ComboBoxItem>User</ComboBoxItem>
+            <ComboBox Name="RoleComboBox" Height="25" SelectedIndex="1" FontSize="14">
+                <ComboBoxItem FontSize="14">Developer</ComboBoxItem>
+                <ComboBoxItem FontSize="14">User</ComboBoxItem>
             </ComboBox>
 
-            <Button Content="Зарегистрироваться" Width="160" Margin="0,12,0,0" Click="Register_Click"/>
-            <Button Content="Вернуться к входу" Width="160" Margin="0,6,0,0" Click="BackToLogin_Click"/>
+            <Button Content="Зарегистрироваться" Width="160" Height="25" Margin="0,12,0,0" Click="Register_Click"/>
+            <Button Content="Вернуться к входу" Width="160" Height="25"  Margin="0,6,0,0" Click="BackToLogin_Click"/>
         </StackPanel>
     </Grid>
 </Page>

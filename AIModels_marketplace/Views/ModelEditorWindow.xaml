@@ -50,19 +50,19 @@
             <!-- Audio -->
             <StackPanel Orientation="Horizontal" Margin="0,6,0,0" Name="AudioPanel" Visibility="Collapsed">
                 <Label Content="SampleRate:" Width="120"/>
-                <TextBox Name="SampleRateTextBox" Width="300"/>
+                <TextBox Name="SampleRateTextBox" Width="300" FontSize="14"/>
             </StackPanel>
 
             <!-- Text -->
             <StackPanel Orientation="Horizontal" Margin="0,6,0,0" Name="TextPanel" Visibility="Collapsed">
                 <Label Content="MaxTokens:" Width="120"/>
-                <TextBox Name="MaxTokensTextBox" Width="300"/>
+                <TextBox Name="MaxTokensTextBox" Width="300" FontSize="14"/>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.ColumnSpan="2">
-            <Button Name="SaveButton" Content="Сохранить" Width="100" Click="SaveButton_Click"/>
-            <Button Name="CancelButton" Content="Отмена" Width="100" Margin="8,0,0,0" Click="CancelButton_Click"/>
+            <Button Name="SaveButton" Content="Сохранить" Width="100" Height="25" Click="SaveButton_Click"/>
+            <Button Name="CancelButton" Content="Отмена" Width="100" Height="25"  Margin="8,0,0,0" Click="CancelButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
